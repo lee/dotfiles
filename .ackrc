@@ -1,0 +1,3 @@
+--ignore-dir=cache
+--type-add=cucumber_features=.feature
+
