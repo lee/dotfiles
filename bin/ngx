@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+`sudo /usr/local/nginx/sbin/nginx -c /Users/leebankewitz/p/weplay/nginx-generated/nginx.conf`
+

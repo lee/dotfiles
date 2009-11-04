@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+pid = `cat /var/run/nginx.pid`
+`sudo kill #{pid}`

@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# dir = ARGV.any? ? File.join(ARGV.first, "*") : "*"
+Dir.chdir(ARGV.first) if ARGV.any? 
+
+raise "This doesn't look like a Rails project" unless File.exist?("Rakefile")
+
+files = Dir["*"] - %w[log tmp vendor coverage]
+
+files.reject! { |file| file =~ /\.dump$/ }
+
+`mate #{files.join(" ")}`

@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+authors = {
+  "bh" => "Bryan Helmkamp",
+  "lm" => "Luke Melia",
+  "lb" => "Lee Bankewitz",
+  "jk" => "Josh Knowles",
+  "nd" => "Noah Davis",
+  "rk" => "Ross Kaffenberger",
+  "ja" => "John Allison"
+}
+
+authors = ARGV.map { |initials| authors[initials] }
+
+if authors.any?
+  authors = authors.join(" and ")
+  `git config user.name '#{authors}'`
+  `git config user.email 'developers@weplay.com'`
+  puts authors
+else
+  `git config --unset user.name`
+  `git config --unset user.email`
+  puts "Reset author to default"
+end
