@@ -1,0 +1,6 @@
+[user]
+	name = Lee Bankewitz
+	email = lee@foo
+[core]
+  excludesfile = /Users/leebankewitz/.gitignore
+  editor= mvim -f
