@@ -1,13 +1,7 @@
 #!/usr/bin/env ruby
 
 authors = {
-  "bh" => "Bryan Helmkamp",
-  "lm" => "Luke Melia",
   "lb" => "Lee Bankewitz",
-  "jk" => "Josh Knowles",
-  "nd" => "Noah Davis",
-  "rk" => "Ross Kaffenberger",
-  "ja" => "John Allison"
 }
 
 authors = ARGV.map { |initials| authors[initials] }
@@ -15,7 +9,7 @@ authors = ARGV.map { |initials| authors[initials] }
 if authors.any?
   authors = authors.join(" and ")
   `git config user.name '#{authors}'`
-  `git config user.email 'developers@weplay.com'`
+  `git config user.email 'somone@foo.com'`
   puts authors
 else
   `git config --unset user.name`
